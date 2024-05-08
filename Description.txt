@@ -1,0 +1,20 @@
+Project Title: Car Price Classification
+
+Description:
+
+The Car Price Classification project is a simple Shiny app that allows users to upload a CSV file containing car price data. The app reads the CSV file, classifies the cars based on price range, and displays the distribution using a pie chart.
+
+Features:
+
+- Upload a CSV file containing car price data
+- Classify cars based on price range
+- Visualize the distribution of car prices using a pie chart
+
+Usage:
+
+1. Upload a CSV file containing car price data.
+2. View the distribution of car prices based on price range.
+
+Data:
+
+The app expects the CSV file to have a column named "Selling_Price" containing the selling price of cars.

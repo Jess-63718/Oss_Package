@@ -18,18 +18,16 @@ ui <- fluidPage(
   )
 )
 
-# Define server logic required
 server <- function(input, output) {
 
-  # Read the car price dataset
   cars <- reactive({
     req(input$file)
     read.csv(input$file$datapath)
   })
 
-  # Generate pie chart when a file is uploaded
+
   observeEvent(input$file, {
-    # Classify cars based on price range
+
     cars_data <- cars()
     cars_data$Price_Range <- cut(cars_data$Selling_Price, breaks = c(0, 5, 10, 15, 20, 25, 30, Inf),
                                  labels = c("0-5", "5-10", "10-15", "15-20", "20-25", "25-30", "30+"))
